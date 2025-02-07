@@ -20,4 +20,8 @@ jobs:
       - name: Check log file  
         run: |  
           ls  
-          cat log.txt  
+          if [ -f "log.txt" ]; then  
+            cat log.txt  
+          else  
+            echo "log.txt not found!"  
+          fi  
