@@ -21,3 +21,9 @@ jobs:
         run: |  
           ls  
           cat log.txt  
+
+      - name: Commit log file  
+        run: |  
+          git add log.txt  
+          git commit -m "Update log file"  
+          git push
