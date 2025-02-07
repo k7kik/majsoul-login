@@ -1,9 +1,13 @@
 import sys  
+import os
 from time import sleep, time  
 from datetime import datetime  
 from selenium import webdriver  
 from selenium.webdriver import ActionChains  
 from selenium.webdriver.common.by import By  
+
+# 定义日志文件路径  
+log_path = os.path.join(os.getcwd(), "log.txt")  
 
 # 记录代码开始执行的时间  
 start_time = time()  
