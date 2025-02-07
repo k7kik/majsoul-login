@@ -25,3 +25,16 @@ jobs:
           else  
             echo "log.txt not found!"  
           fi  
+
+      - name: git config
+        run: |-
+         git config --global user.name "Github Actions"
+         git config --global user.email "actions@gmail.com"
+         
+      - name: Push
+        run: |-
+          git diff
+          git status
+          git add -A
+          git commit -m "update by github actions"
+          git push
